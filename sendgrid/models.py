@@ -241,7 +241,7 @@ class EmailMessage(models.Model):
 				if len(existingEmail) > 0:
 					logger.debug("DEBUG-EVENT: Found an existing email with message_id {0}".format(event_dict.get("message_id", None)))
 
-            emailMessage = EmailMessage.objects.create(**emailMessageSpec)
+			emailMessage = EmailMessage.objects.create(**emailMessageSpec)
 
 			for category in categories:
 				categoryObj,created = Category.objects.get_or_create(name=category)
