@@ -151,6 +151,6 @@ class SendGridEmailMultiAlternatives(SendGridEmailMessageMixin, EmailMultiAltern
         logger.debug(
             "Tried to send a multialternatives email with SendGrid and got response {r}".format(r=response))
         sendgrid_email_sent.send(
-            sender=self, message=self, response=len(response))
+            sender=self, message=self, response=response)
 
         return response
